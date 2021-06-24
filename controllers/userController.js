@@ -14,7 +14,7 @@ const createUser = async (request, response) => {
     const {cpf, name, phone, birth } = request.body;
     const { status, message } = await service.createUser(cpf, name, phone, birth);
 
-    if (!status) return response.status(StatusCodes.OK).json({ message });
+    if (!status) return response.status(StatusCodes.BAD_REQUEST).json({ message });
 
     response.status(StatusCodes.CREATED).json({ message });
   } catch (error) {    
@@ -27,7 +27,7 @@ const deleteUser = async (request, response) => {
     const { cpf } = request.body;
     const { status, message } = await service.deleteUser(cpf);
 
-    if (!status) return response.status(StatusCodes.OK).json({ message });
+    if (!status) return response.status(StatusCodes.NOT_FOUND).json({ message });
 
     response.status(StatusCodes.OK).json({ message })
   } catch (error) {
@@ -40,7 +40,7 @@ const updateUser = async (request, response) => {
     const {cpf, name, phone, birth} = request.body;
     const { status, message } = await service.updateUser(cpf, name, phone, birth);
     
-    if (!status) return response.status(StatusCodes.OK).json({ message });
+    if (!status) return response.status(StatusCodes.BAD_REQUEST).json({ message });
 
     response.status(StatusCodes.ACCEPTED).json({ message })
   } catch (error) {    
