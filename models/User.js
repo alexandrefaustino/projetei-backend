@@ -1,13 +1,12 @@
-const defineUserModel = (sequelize, DataTypes) => {
-  const User = sequelize.define('User', {
+const defineUserModel = (sequelize, DataTypes) => {  
+  return sequelize.define('Users', {    
+    cpf: { primaryKey: true, type: DataTypes.STRING},
     name: DataTypes.STRING,
     phone: DataTypes.STRING,
-    birth: DataTypes.DATE,
+    birth: DataTypes.DATEONLY,
     creationDate: DataTypes.DATE,
     updateDate: DataTypes.DATE,
-  }, { timestamp: false });
-  
-  return User;
+  }, { timestamps: false });    
 };
 
 module.exports = defineUserModel;

@@ -2,11 +2,10 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('user', { 
+    await queryInterface.createTable('Users', { 
       cpf: {
-        type: Sequelize.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
+        type: Sequelize.STRING,
+        primaryKey: true,        
         allowNull: false,
       },
       name: {
@@ -18,7 +17,7 @@ module.exports = {
         allowNull: false,
       },
       birth: {
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: false,
       },
       creationDate:{
@@ -33,6 +32,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('user');     
+    await queryInterface.dropTable('Users');     
   }
 };
