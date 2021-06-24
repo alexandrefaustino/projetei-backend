@@ -1,17 +1,17 @@
 
 module.exports = {
   "development": {
-    "username": MYSQL_USER_PRODUCTION,
-    "password": MYSQL_PASSWORD_PRODUCTION,
-    "database": DATABASE_PRODUCTION,
-    "host": HOST_NAME_PRODUCTION,
+    "username": process.env.MYSQL_USER_PRODUCTION,
+    "password": process.env.MYSQL_PASSWORD_PRODUCTION,
+    "database": process.env.DATABASE_PRODUCTION,
+    "host": process.env.HOST_NAME_PRODUCTION,
     "dialect": "mysql"
   },
   "production": {
-    "username": MYSQL_USER_PRODUCTION,
-    "password": MYSQL_PASSWORD_PRODUCTION,
-    "database": DATABASE_PRODUCTION,
-    "host": HOST_NAME_PRODUCTION,
+    "username": process.env.MYSQL_USER_PRODUCTION,
+    "password": process.env.MYSQL_PASSWORD_PRODUCTION,
+    "database": process.env.DATABASE_PRODUCTION,
+    "host": process.env.HOST_NAME_PRODUCTION,
     "dialect": "mysql"
   },
   "test": {
