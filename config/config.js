@@ -2,10 +2,10 @@ require('dotenv/config');
 
 module.exports = {
   "development": {
-    "username": process.env.MYSQL_USER,
-    "password": process.env.MYSQL_PASSWORD,
-    "database": process.env.DATABASE,
-    "host": process.env.HOST_NAME,
+    "username": process.env.MYSQL_USER_PRODUCTION,
+    "password": process.env.MYSQL_PASSWORD_PRODUCTION,
+    "database": process.env.DATABASE_PRODUCTION,
+    "host": process.env.HOST_NAME_PRODUCTION,
     "dialect": "mysql"
   },
   "production": {
