@@ -5,7 +5,7 @@ const findAll = async (request, response) => {
   try {    
     const users = await service.findAll();        
     response.status(StatusCodes.OK).json(users);
-  } catch (error) {
+  } catch (error) {    
     return response.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ message: internalError });
   }
 }

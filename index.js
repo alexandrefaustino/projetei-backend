@@ -1,7 +1,6 @@
 const express = require('express');
 
 const userRouter = require('./routers/userRouter');
-// const URL = 'https://projetei-backend.herokuapp.com';
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
