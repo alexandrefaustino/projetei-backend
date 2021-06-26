@@ -25,7 +25,8 @@ const createUser = async (cpf, name, phone, birth) => {
   if (!bodyIsValid) return { status: false, message: invalidData };
   
   const creationDate = new Date();
-  const updateDate = new Date();  
+  const updateDate = new Date(); 
+   
   const user = await Users.create({ 
     cpf, name, phone, birth, creationDate, updateDate 
   });
